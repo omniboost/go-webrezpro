@@ -32,7 +32,8 @@ func (c *Client) NewGetTrialBalanceQueryParams() *GetTrialBalanceQueryParams {
 }
 
 type GetTrialBalanceQueryParams struct {
-	Date Date `schema:"date"`
+	Date             Date   `schema:"date"`
+	DepartmentNumber string `schema:"department_number,omitempty"`
 }
 
 func (p GetTrialBalanceQueryParams) ToURLValues() (url.Values, error) {

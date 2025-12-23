@@ -11,7 +11,8 @@ import (
 
 func TestGetTrialBalanceRequest(t *testing.T) {
 	req := client.NewGetTrialBalanceRequest()
-	req.QueryParams().Date = webrezpro.Date{time.Date(2024, 10, 24, 0, 0, 0, 0, time.UTC)}
+	req.QueryParams().Date = webrezpro.Date{time.Date(2025, 12, 21, 0, 0, 0, 0, time.UTC)}
+	req.QueryParams().DepartmentNumber = "2"
 	resp, err := req.Do()
 	if err != nil {
 		t.Error(err)
